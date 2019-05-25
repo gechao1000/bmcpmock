@@ -1,6 +1,6 @@
 package com.budata.mock.web;
 
-import com.budata.mock.vo.Json;
+import com.budata.mock.vo.R;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
-    public Json handleException(Exception e) {
-        return Json.fail(e.getLocalizedMessage());
+    public R handleException(Exception e) {
+        return R.fail(e.getLocalizedMessage());
     }
 
 }

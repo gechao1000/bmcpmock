@@ -1,9 +1,8 @@
 package com.budata.mock.web;
 
 import com.budata.mock.vo.BaseParam;
-import com.budata.mock.vo.Json;
+import com.budata.mock.vo.R;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,8 +25,8 @@ public class InvoiceProcessController {
      *
      */
     @PostMapping("scanner")
-    public Json scanner(@Valid BaseParam param, BindingResult result) {
-        return Json.succ("扫描仪接口调用成功");
+    public R scanner(@RequestBody @Valid BaseParam param, BindingResult result) {
+        return R.succ("扫描仪接口调用成功");
     }
 
     /**
@@ -35,8 +34,8 @@ public class InvoiceProcessController {
      *
      */
     @PostMapping("nationalTax")
-    public Json nationalTax(@Valid BaseParam param, BindingResult result) {
-        return Json.succ("国税接口调用成功");
+    public R nationalTax(@RequestBody @Valid BaseParam param, BindingResult result) {
+        return R.succ("国税接口调用成功");
     }
 
     /**
@@ -44,8 +43,8 @@ public class InvoiceProcessController {
      *
      */
     @PostMapping("bank")
-    public Json bank(@Valid BaseParam param, BindingResult result) {
-        return Json.succ("银行接口调用成功");
+    public R bank(@RequestBody @Valid BaseParam param, BindingResult result) {
+        return R.succ("银行接口调用成功");
     }
 
 
@@ -54,8 +53,17 @@ public class InvoiceProcessController {
      *
      */
     @PostMapping("baiwang")
-    public Json baiwang(@Valid BaseParam param, BindingResult result) {
-        return Json.succ("百旺接口调用成功");
+    public R baiwang(@RequestBody @Valid BaseParam param, BindingResult result) {
+        return R.succ("百旺接口调用成功");
+    }
+
+    /**
+     * 长益
+     *
+     */
+    @PostMapping("changyi")
+    public R changyi(@RequestBody @Valid BaseParam param, BindingResult result) {
+        return R.succ("长益接口调用成功");
     }
 
 }

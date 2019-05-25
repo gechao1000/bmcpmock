@@ -1,10 +1,9 @@
 package com.budata.mock.aop;
 
-import com.budata.mock.vo.Json;
+import com.budata.mock.vo.R;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.BindingResult;
@@ -33,7 +32,7 @@ public class BindingResultAop {
         }
         if (bindingResult != null) {
             if (bindingResult.hasErrors()) {
-                return Json.fail(bindingResult.getFieldError().getDefaultMessage());
+                return R.fail(bindingResult.getFieldError().getDefaultMessage());
             }
         }
         return joinPoint.proceed();
