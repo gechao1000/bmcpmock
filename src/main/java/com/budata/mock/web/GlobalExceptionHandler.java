@@ -1,6 +1,6 @@
 package com.budata.mock.web;
 
-import com.budata.mock.vo.R;
+import com.budata.mock.util.R;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 

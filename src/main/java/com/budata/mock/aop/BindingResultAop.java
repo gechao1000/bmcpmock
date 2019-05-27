@@ -1,6 +1,6 @@
 package com.budata.mock.aop;
 
-import com.budata.mock.vo.R;
+import com.budata.mock.util.R;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;

@@ -1,4 +1,4 @@
-package com.budata.mock.vo;
+package com.budata.mock.util;
 
 import java.util.HashMap;
 

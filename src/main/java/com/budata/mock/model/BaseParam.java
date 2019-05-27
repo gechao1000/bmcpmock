@@ -1,4 +1,4 @@
-package com.budata.mock.vo;
+package com.budata.mock.model;
 
 import lombok.Data;
 
